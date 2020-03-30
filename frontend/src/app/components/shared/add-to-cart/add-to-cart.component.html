@@ -1,0 +1,22 @@
+<ng-container *ngIf="isHomePage; else elseTemplate">
+        <input type="number" *ngIf="this.newMessage!=0" value="1" aria-label="Search" class="form-control d-none" style="width: 100px" [(ngModel)]="quantity" >
+        <button class="add-to-cart" *ngIf="this.newMessage!=0" (click)="onAddProductToCart()">ADD TO CART1</button>
+        <button disabled *ngIf="this.newMessage==0" class="btn btn-danger btn-md my-0 p" type="button" (click)="onAddProductToCart()">Out Of Stock
+                <i class="fas fa-shopping-cart ml-1"></i>
+            </button>
+</ng-container>
+<ng-template #elseTemplate >
+        <input *ngIf="this.newMessage!=0" type="number" value="1" aria-label="Search" class="form-control" style="width: 100px" [(ngModel)]="quantity" >
+        <button *ngIf="this.newMessage!=0" class="btn btn-primary btn-md my-0 p" type="button" (click)="onAddProductToCart()">Add to cart
+                <i class="fas fa-shopping-cart ml-1"></i>
+            </button>
+            <button disabled *ngIf="this.newMessage==0" class="btn btn-danger btn-md my-0 p" type="button" (click)="onAddProductToCart()">Out Of Stock
+                <i class="fas fa-shopping-cart ml-1"></i>
+            </button>
+            <!-- <div *ngIf="this.newMessage!=0" >
+{{newMessage}}
+        </div> -->
+<!--         
+        <input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
+        <button (click)="sendMessage()">Send Message</button> -->
+</ng-template>
