@@ -39,7 +39,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ```sh
-$ git clone https://github.com/darkslayer92/Simple-E-Commerce-Application.git # or clone your own fork
+$ git clone https://github.com/priyankasahu437/stockManagement.git # or clone your own fork
 $ Restore database file on /database/stockManagement.sql
 $ cd frontend
 $ npm install
